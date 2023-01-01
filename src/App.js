@@ -6,24 +6,22 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 
 function App() {
-
-  const [city,setcity] = useState('');
-  const [temp,settemp] = useState(0);
-  const [Humidity,sethumidity] = useState(0);
-  const [search,setsearch] = useState('jaipur');
-  const [pressure,setpressure] = useState(0);
+const [city,setcity] = useState('');
+ const [temp,settemp] = useState(0);
+const [Humidity,sethumidity] = useState(0);
+ const [search,setsearch] = useState('jaipur');
+ const [pressure,setpressure] = useState(0);
   const [wind,setwind] = useState(0);
-  
   useEffect(()=>{
-    console.log("I am inside useEffect");
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=c593f6fa856f4ced6e2e008b42b2cd18`).then((res)=>{
+   console.log("I am inside useEffect");
+   axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=c593f6fa856f4ced6e2e008b42b2cd18`).then((res)=>{
  console.log("res",res);
 
 
 
  settemp(res.data.main.temp);
-          setpressure(res.data.main.pressure);
-           sethumidity(res.data.main.humidity);
+        setpressure(res.data.main.pressure);
+          sethumidity(res.data.main.humidity);
          setwind(res.data.wind.speed);
         setcity(res.data.name);
 
