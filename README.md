@@ -1,7 +1,6 @@
-
 weather-app
 A React weather app where the user can get real-time weather information for any city .
-weather API from https://openweathermap.org/api
+weather 
 
 
 ![Screenshot (8)](https://user-images.githubusercontent.com/121744250/210166238-14cb8c14-b758-4b7f-9f17-73345d0d8d90.png)
